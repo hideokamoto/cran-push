@@ -34,12 +34,13 @@ const loadHeaderJSON = (path = './public', fileName = '_headers') => {
 
 
 program
-  .version('0.0.1', '-v, --version')
+  .version('0.0.2', '-v, --version')
 program
   .command('generate')
   .description('Generate _headers file with server push header.')
-  .option('-m, --manifest-dir <manifestDir>', 'directory name of asset-manifest.json')
-  .option('-h, --headers-dir <headersDir>', 'directory name of _headers')
+  .option('-m, --manifest-dir <manifestDir>', 'directory name of asset-manifest.json [Default: build/]')
+  .option('-h, --headers-dir <headersDir>', 'directory name of _headers [Default: public/]')
+  .option('-D, --distination <distination>', 'exported _headers file path [Default: build/]')
   .option('-d, --dry-run', 'dry-run(not generate _headers file)')
   .action(options => {
     const { manifestDir, headersDir, dryRun } = options
@@ -53,7 +54,8 @@ program
     const newHeaders = generateHeadersFile(assetManifest, file)
     if (!dryRun) {
       console.log('Generating _headers file.')
-      fs.writeFileSync('_headers', newHeaders)
+      const dist = getFilePath(options.distination || 'build/', '_headers')
+      fs.writeFileSync(dist, newHeaders)
       console.log(chalk.green('[SUCCESS]') + ' _headers file has been generated')
     } else {
       console.log(chalk.green('[DRY RUN]') + ' Generating _headers file.')
