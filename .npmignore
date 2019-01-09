@@ -1,0 +1,7 @@
+node_modules/
+_headers/
+asset-manifest.json
+__tests__/
+.gitignore
+build/
+public/

@@ -1,0 +1,5 @@
+node_modules/
+_headers
+asset-manifest.json
+build/
+public/
