@@ -34,7 +34,7 @@ const loadHeaderJSON = (path = './public', fileName = '_headers') => {
 
 
 program
-  .version('0.0.2', '-v, --version')
+  .version('0.0.3', '-v, --version')
 program
   .command('generate')
   .description('Generate _headers file with server push header.')
