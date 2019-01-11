@@ -14,9 +14,7 @@ Generated files
 /*
   Link: </service-worker.js>; rel=preload; as=script
   Link: </static/css/main.8311bcb0.css>; rel=preload; as=style
-  Link: </static/css/main.8311bcb0.css.map>; rel=preload; as=style
   Link: </static/js/main.e38f9055.js>; rel=preload; as=script
-  Link: </static/js/main.e38f9055.js.map>; rel=preload; as=style
 ```
 
 ### Before
