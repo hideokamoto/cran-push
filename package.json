@@ -1,6 +1,6 @@
 {
   "name": "cran-push",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate _headers file to support HTTP2 Server push for the Create React App.",
   "main": "cli.js",
   "scripts": {

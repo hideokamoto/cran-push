@@ -98,5 +98,17 @@ describe('generateHeadersFile', () => {
   Link: </static/css/main.8311bcb9.css>; rel=preload; as=style
   Link: </static/js/main.e38f9055.js>; rel=preload; as=script`)
     })
+    it('should return header string without chunk file', () => {
+      const headers = [
+        '/*',
+        '  Link: </service-worker.js>; rel=preload; as=script',
+        ''
+        ]
+      const result = generateHeadersFile(items, headers)
+      assert.equal(result, `/*
+  Link: </service-worker.js>; rel=preload; as=script
+  Link: </static/css/main.8311bcb9.css>; rel=preload; as=style
+  Link: </static/js/main.e38f9055.js>; rel=preload; as=script`)
+    })
   })
 })

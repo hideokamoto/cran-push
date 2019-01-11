@@ -17,7 +17,7 @@ const getHeadersFile = (items, headers) => {
 const generateHeadersFile = (items, headers) => {
   const lists = getHeadersFile(items, headers)
   const header = Array.from(new Set(lists))
-  return header.join('\n')
+  return header.filter(item => item).join('\n')
 }
 
 const getFilePath = (path, fileName) => {
