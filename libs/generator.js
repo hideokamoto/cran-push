@@ -5,8 +5,9 @@ const getHeadersFile = (items, headers) => {
   Object.keys(items).forEach(key => {
     const fileName = items[key]
     if (/.js$/.test(key)) {
+      if (/.chunk.js$/.test(key)) return
       headers.push(getScriptHeader(fileName))
-    } else {
+    } else if(/.css$/.test(key)) {
       headers.push(getCssHeader(fileName))
     }
   })
