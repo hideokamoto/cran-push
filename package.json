@@ -14,7 +14,7 @@
   "author": "Hidetaka Okamoto <info@wp-kyoto.net> (https://wp-kyoto.net)",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "power-assert": "^1.6.1"
   },
   "jest": {
