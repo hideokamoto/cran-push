@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "chalk": "^4.0.0",
-    "commander": "^2.19.0"
+    "commander": "^5.0.0"
   },
   "bin": {
     "cran-push": "./cli.js"
