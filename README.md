@@ -1,3 +1,7 @@
+> ⚠️ **This package is deprecated**  
+> This package is deprecated because Create React App is deprecated.  
+> Please use modern build tools like Vite, Next.js, or other alternatives instead.
+
 # [cran-push] Create React App server push header generator for Netlify
 It is smple CLI tools for Create React App and Netlify
 
